@@ -1,0 +1,3 @@
+*.png
+.eslintrc.js
+.DS_Store

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <script src="management.js" type="application/javascript" defer=""></script>
+  <style type="text/css">
+    :root {
+      font: message-box;
+      color: #0c0c0d;
+    }
+    body {
+      font-size: 1.1em;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    h1 {
+      font-weight: 600;
+      font-size: 1.25em;
+      margin-top: 0;
+      margin-bottom: 0.5em;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 1.1em;
+      margin: 0.5em 0;
+    }
+    p {
+      margin: 0.5em 0;
+    }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color: #fff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h1>S3</h1>
+    <ul>
+      <li>
+        <label>
+          <h2>Endpoint</h2>
+          <input type="text" name="endpoint" required="true" placeholder="s3.us-east-2.amazonaws.com" />
+        </label>
+        <label>
+          <h2>Region</h2>
+          <input type="text" name="region" required="false" placeholder="us-east-2" />
+        </label>
+        <label>
+          <h2>Bucket</h2>
+          <input type="text" name="bucket" required="true" placeholder="mail-attachments" />
+        </label>
+        <label>
+          <h2>Prefix</h2>
+          <input type="text" name="prefix" required="true" placeholder="uploads/" />
+        </label>
+        <label>
+          <h2>Access Key</h2>
+          <input type="password" name="access_key" required="true" />
+        </label>
+        <label>
+          <h2>Secret Key</h2>
+          <input type="password" name="secret_key" required="true" />
+        </label>
+      </li>
+    </ul>
+    <div style="text-align: right"><button type="button" name="save" data-i18n="save">Save</button></div>
+  </form>
+</body>
+</html>

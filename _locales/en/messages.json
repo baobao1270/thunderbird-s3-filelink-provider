@@ -1,0 +1,14 @@
+{
+  "serviceName": {
+    "message": "S3"
+  },
+  "extensionDescription": {
+    "message": "Uploads your large attachments to S3"
+  },
+  "extensionName": {
+    "message": "S3 FileLink Provider"
+  },
+  "save": {
+    "message": "Save"
+  }
+}

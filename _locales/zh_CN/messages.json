@@ -1,0 +1,14 @@
+{
+  "serviceName": {
+    "message": "S3/COS/OSS"
+  },
+  "extensionDescription": {
+    "message": "向 AWS S3 / COS / OSS 上传您的邮件附件"
+  },
+  "extensionName": {
+    "message": "S3 附件提供程序"
+  },
+  "save": {
+    "message": "保存"
+  }
+}

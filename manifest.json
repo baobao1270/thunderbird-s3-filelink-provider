@@ -1,0 +1,27 @@
+{
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+  "version": "1.0.0",
+  "author": "Joseph Chris",
+  "applications": {
+    "gecko": {
+      "id": "s3-filelink-provider-developer@josephcz.xyz",
+      "strict_min_version": "91.0"
+    }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "cloud_file": {
+    "name": "__MSG_serviceName__",
+    "management_url": "management.html"
+  },
+  "permissions": [
+    "<all_urls>",
+    "storage"
+  ],
+  "default_locale": "en",
+  "manifest_version": 2
+}
