@@ -1,5 +1,13 @@
 var uploadQueue = new Map();
 
+function encodeURIRFC3986(text) {
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent#encoding_for_rfc3986
+  return encodeURIComponent(text).replace(
+    /[!'()*]/g,
+    (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`,
+  );
+}
+
 function byte2hex(array) {
   return Array.from(array).map(b => b.toString(16).padStart(2, "0")).join("");
 }
@@ -94,7 +102,7 @@ async function uploadFile(account, upload, data) {
   const name = upload.name;
   const date = new Date().toISOString().replace(/[:-]|\.\d{3}/g, "");
   const fileSha256  = await sha256File(data);
-  const filePath = `${getAccountPrefix(account)}/${date}-SHA256-${fileSha256}/${encodeURIComponent(name)}`;
+  const filePath = `${getAccountPrefix(account)}/${date}-SHA256-${fileSha256}/${encodeURIRFC3986(name)}`;
   const sign = await signAwsV4({
     method: "PUT",
     path: `/${filePath}`,
